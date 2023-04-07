@@ -33,10 +33,60 @@ code {
   padding: 1em;
   justify-content: space-between;
   align-items: center;
+  position: sticky;
+  top:0;
+  z-index: 99;
 }
 
 .nav > ul {
   list-style: none;
   display: flex;
   gap: 1em;
+}
+
+.container {
+  width: 100%;
+  height: 200vh;
+  margin: 0 auto;
+  position: relative;
+  /* display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em; */
+}
+
+.project-container {
+  width: 50vw;
+  height: 50vh;
+  background: var(--bg2);
+  border: 3px solid var(--primary);
+  position: relative;
+  top: 20vh;
+  left: 25vw;
+  transition: all 0.2s ease-in-out;
+}
+
+.fixed {position: fixed;}
+
+#donut {
+  background: var(--primary);
+  color: var(--bg);
+  transform: rotate(5deg);
+}
+
+#aoy {
+  transform: rotate(-10deg);
+}
+
+#gipf {
+}
+
+#aoy.under:hover {
+  top: 25px;
+  left: 20vw;
+}
+
+#donut.under:hover {
+  top: 15px;
+  left: 35vw;
 }
