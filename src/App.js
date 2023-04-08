@@ -10,10 +10,12 @@ function App() {
       <Navbar />
       {/* about section */}
       <div className='container'>
-        <motion.div className='project-container fixed' id="donut"
+        <motion.div
+          className='project-container fixed'
+          id="donut"
           animate={{rotate: "10deg", x: 0}}
           transition={{ ease: "easeOut", duration: 0.2, x: { duration: 0.1} }}
-          whileHover={{scale: 1.1, x: 100}} />
+          whileHover={{x: -100, rotate: "15deg"}}></motion.div>
         <div className='project-container fixed' id="aoy">project</div>
         <div className='project-container' id="gipf">project</div>
       </div>
