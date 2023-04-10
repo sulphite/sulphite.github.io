@@ -3,8 +3,8 @@ export default function Navbar() {
     <nav className="nav">
       <h3>jfgerrard</h3>
       <ul className="nav--links">
-        <li>About</li>
-        <li>Projects</li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
       </ul>
     </nav>
   )

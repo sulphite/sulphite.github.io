@@ -10,7 +10,7 @@ function App() {
     <div className="App">
       <Navbar />
       <About />
-      <div className='container'>
+      <div className='container' id="projects">
         <motion.div
           className='project-container fixed'
           id="donut"
@@ -26,9 +26,9 @@ function App() {
         <motion.div
           className='project-container fixed'
           id="gipf"
-          animate={{rotate: "1deg", x: 0, y: 0 }}
+          animate={{rotate: "1deg", x: -30, y: 70 }}
           transition={{ ease: "easeOut", duration: 0.2, x: { duration: 0.2} }}
-          whileHover={{x: 0, y: 0,rotate: "5deg"}}>gipf project</motion.div>
+          whileHover={{x: -100, y: 70,rotate: "3deg"}}>gipf project</motion.div>
       </div>
     </div>
   );
