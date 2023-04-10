@@ -9,7 +9,7 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-      {/* about section */}
+      <About />
       <div className='container'>
         <motion.div
           className='project-container fixed'
@@ -24,7 +24,7 @@ function App() {
           transition={{ ease: "easeOut", duration: 0.2, x: { duration: 0.2} }}
           whileHover={{x: 120, y: 20,rotate: "-15deg"}}>aoy project</motion.div>
         <motion.div
-          className='project-container'
+          className='project-container fixed'
           id="gipf"
           animate={{rotate: "1deg", x: 0, y: 0 }}
           transition={{ ease: "easeOut", duration: 0.2, x: { duration: 0.2} }}
