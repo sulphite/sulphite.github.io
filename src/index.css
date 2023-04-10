@@ -63,7 +63,6 @@ code {
   position: relative;
   top: 20vh;
   left: 25vw;
-  transition: all 0.2s ease-in-out;
 }
 
 .fixed {position: fixed;}
@@ -71,22 +70,12 @@ code {
 #donut {
   background: var(--primary);
   color: var(--bg);
-  transform: rotate(5deg);
 }
 
-#aoy {
-  transform: rotate(-10deg);
-}
 
-#gipf {
-}
-
-#aoy.under:hover {
-  top: 25px;
-  left: 20vw;
-}
+/*
 
 #donut.under:hover {
   top: 15px;
   left: 35vw;
-}
+} */
