@@ -5,11 +5,16 @@ import Projects from "./components/Projects"
 
 
 function App() {
+  const tidyUp = () => {
+
+  }
+
   return (
     <div className="App">
       <Navbar />
       <About />
       <Projects />
+      <button onClick={tidyUp}>tidy up</button>
     </div>
   );
 }

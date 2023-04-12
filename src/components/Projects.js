@@ -1,5 +1,5 @@
-import { motion, useScroll, useAnimation } from "framer-motion"
-import { useRef } from "react"
+import { motion, useScroll, useAnimation, useInView } from "framer-motion"
+
 
 export default function Projects() {
   const donut = {
@@ -19,6 +19,8 @@ export default function Projects() {
     anim: {rotate: "1deg", x: -30, y: 70, transition: {type: "spring", duration: 0.6, ease: "easeOut"}},
     hover: {x: -100, y: 70, rotate: "-3deg", transition: {ease: "easeOut", duration: 0.2}}
   }
+
+
 
   return (
     <div className='container' id="projects">
