@@ -1,7 +1,11 @@
 import { motion, useScroll, useAnimation, useInView } from "framer-motion"
+import { useEffect, useRef } from "react"
 
 
 export default function Projects() {
+  const topItem = useRef(null)
+  const isInView = useInView(topItem)
+
   const donut = {
     init: {x: 1000},
     anim: {rotate: "10deg", x: 0, transition: {type: "spring", duration: 0.6, ease: "easeOut"}},
@@ -19,6 +23,14 @@ export default function Projects() {
     anim: {rotate: "1deg", x: -30, y: 70, transition: {type: "spring", duration: 0.6, ease: "easeOut"}},
     hover: {x: -100, y: 70, rotate: "-3deg", transition: {ease: "easeOut", duration: 0.2}}
   }
+
+  useEffect(() => {
+    console.log("in view:", isInView)
+
+    // const nextItem = document.getElementById("gipf")
+    // isInView ? nextItem.classList.add("fixed") : nextItem.classList.remove("fixed")
+
+  }, [isInView])
 
 
 
@@ -43,6 +55,7 @@ export default function Projects() {
         whileHover="hover">aoy project</motion.div>
 
       <motion.div
+        ref={topItem}
         variants={gipf}
         className='project-container fixed'
         id="gipf"

@@ -7,10 +7,10 @@ export default function About() {
   const isInView = useInView(ref)
 
   useEffect(() => {
-    console.log("in view:", isInView)
-    const nextItem = document.getElementById("gipf")
-    isInView ? nextItem.classList.add("fixed") : nextItem.classList.remove("fixed")
-
+    // console.log("in view:", isInView)
+    // const nextItem = document.getElementById("gipf")
+    // isInView ? nextItem.classList.add("fixed") : nextItem.classList.remove("fixed")
+    console.log(ref.current.nextSibling)
   }, [isInView])
 
   return (

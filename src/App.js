@@ -13,7 +13,10 @@ function App() {
     <div className="App">
       <Navbar />
       <About />
-      <Projects />
+      <div className='project-container fixed'>1</div>
+      <div className='project-container fixed'>2</div>
+      <div className='project-container fixed'>3</div>
+      {/* <Projects /> */}
       <button onClick={tidyUp}>tidy up</button>
     </div>
   );
