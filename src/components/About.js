@@ -3,18 +3,20 @@ import { useInView } from "framer-motion"
 import { useEffect, useRef } from "react"
 
 export default function About() {
-  const ref = useRef(null)
-  const isInView = useInView(ref)
+  // const ref = useRef(null)
+  // const isInView = useInView(ref)
 
-  useEffect(() => {
-    // console.log("in view:", isInView)
-    // const nextItem = document.getElementById("gipf")
-    // isInView ? nextItem.classList.add("fixed") : nextItem.classList.remove("fixed")
-    console.log(ref.current.nextSibling)
-  }, [isInView])
+  // useEffect(() => {
+  //   // console.log("in view:", isInView)
+  //   // const nextItem = document.getElementById("gipf")
+  //   // isInView ? nextItem.classList.add("fixed") : nextItem.classList.remove("fixed")
+  //   console.log(ref.current.nextSibling)
+  //   const nextItem = ref.current.nextSibling
+
+  // }, [isInView])
 
   return (
-    <div className="about" id="about" ref={ref}>
+    <div className="about" id="about">
       <img src={pro} />
       <div className="about--infos">
         <h1>ABOUT DIV HERE</h1>
