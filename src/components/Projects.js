@@ -1,10 +1,12 @@
-import { motion, useScroll, useAnimation, useInView } from "framer-motion"
+import { motion, useInView } from "framer-motion"
 import { useEffect, useRef } from "react"
 
 
 export default function Projects() {
-  const gipf_ref = useRef(null)
-  const gipfInView = useInView(gipf_ref)
+  const donut_ref = useRef(null)
+  const donutInView = useInView(donut_ref)
+  const aoy_ref = useRef(null)
+  const aoyInView = useInView(aoy_ref)
 
   const donut = {
     init: {x: 1000},
@@ -26,19 +28,19 @@ export default function Projects() {
 
   useEffect(() => {
     const nextItem = document.getElementById("aoy")
-    gipfInView ? nextItem.classList.add("fixed") : nextItem.classList.remove("fixed")
-    // setTimeout(() => {
-    //   console.log("gipf in view:", gipfInView)
+    donutInView ? nextItem.classList.add("fixed") : nextItem.classList.remove("fixed")
+  }, [donutInView])
 
-    //   if(gipfInView) {nextItem.classList.add("fixed")}
-    // }, 2000);
-  }, [gipfInView])
+  useEffect(() => {
+    const nextItem = document.getElementById("gipf")
+    aoyInView ? nextItem.classList.add("fixed") : nextItem.classList.remove("fixed")
+  }, [aoyInView])
 
 
   return (
     <div className='container' id="projects">
       <motion.div
-        ref={gipf_ref}
+        ref={donut_ref}
         variants={donut}
         className='project-container fixed'
         id="donut"
@@ -49,6 +51,7 @@ export default function Projects() {
       </motion.div>
 
       <motion.div
+        ref={aoy_ref}
         variants={aoy}
         className='project-container fixed'
         id="aoy"
