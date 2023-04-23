@@ -38,6 +38,8 @@ code {
   position: sticky;
   top:0;
   z-index: 99;
+  background: linear-gradient(var(--bg),transparent);
+  opacity: 0.8;
 }
 
 .nav > ul {
