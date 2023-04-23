@@ -21,6 +21,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  letter-spacing: 1px;
 }
 
 code {
@@ -43,6 +44,17 @@ code {
   list-style: none;
   display: flex;
   gap: 1em;
+}
+
+.btn {
+  font-size: 0.8rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  border: 0;
+  border-radius: 2px;
+  padding: 0.5em 1em;
+  background-color: var(--primary);
+  color: var(--lighter);
 }
 
 .about {
@@ -106,4 +118,8 @@ code {
 
 #gipf {
   z-index: 20;
+}
+
+.tidy-up {
+  margin: 3em 0;
 }

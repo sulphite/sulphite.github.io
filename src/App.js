@@ -14,7 +14,7 @@ function App() {
       <Navbar />
       <About />
       <Projects />
-      <button onClick={tidyUp}>tidy up</button>
+      <button className='btn tidy-up' onClick={tidyUp}>tidy up</button>
     </div>
   );
 }
