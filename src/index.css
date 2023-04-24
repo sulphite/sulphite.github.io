@@ -109,6 +109,14 @@ code {
   box-shadow: 2px 2px 16px rgba(0,0,0,0.3);
 }
 
+.project-details {
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  gap: 0.5em;
+}
+
 .fixed {
   position: fixed;
 }
