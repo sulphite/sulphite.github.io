@@ -1,9 +1,9 @@
 const projectdata = {
   donut: {
     title: "Every Bite Counts",
-    description: "",
+    description: "An airbnb-style marketplace app for donuts, built with Ruby on Rails. Users can search by location and flavour, and upload their own donuts.",
     github: "https://github.com/sulphite/every-bite-counts",
-    url: "",
+    url: "https://every-bite-counts.herokuapp.com/",
     image_url: ""
   },
   aoy: {
