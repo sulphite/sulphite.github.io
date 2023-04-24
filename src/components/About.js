@@ -19,7 +19,7 @@ export default function About() {
         className="about"
         initial={{opacity: 0, scale: 2}}
         animate={{opacity: 1, scale: 1}}
-        transition={{ type: "spring", ease: "easeInOut", duration: 0.4, delay: 0.3 }}
+        transition={{ type: "spring", ease: "easeInOut", duration: 0.5, delay: 0.7 }}
         id="about"
         ref={ref}>
         <img src={pro} />
