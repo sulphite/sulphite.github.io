@@ -69,6 +69,7 @@ code {
   justify-content: center;
   align-items: center;
   text-shadow: 2px 2px var(--primary);
+  pointer-events: none;
 }
 
 .about img {
@@ -76,6 +77,7 @@ code {
 }
 
 .about--infos {
+  pointer-events: auto;
   width: 25%;
   background: #bec5ad9f;
   color: var(--bg);
