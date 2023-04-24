@@ -1,5 +1,5 @@
 import pro from "../assets/narcissa.png"
-import { useInView } from "framer-motion"
+import { motion, useInView } from "framer-motion"
 import { useEffect, useRef } from "react"
 
 export default function About() {
@@ -15,9 +15,13 @@ export default function About() {
   }, [isInView])
 
   return (
-    <div>
-
-      <div className="about" id="about" ref={ref}>
+      <motion.div
+        className="about"
+        initial={{opacity: 0, scale: 2}}
+        animate={{opacity: 1, scale: 1}}
+        transition={{ type: "spring", ease: "easeInOut", duration: 0.4, delay: 0.3 }}
+        id="about"
+        ref={ref}>
         <img src={pro} />
         <div className="about--infos">
           <h1>ABOUT DIV HERE</h1>
@@ -26,8 +30,6 @@ export default function About() {
             blah blah blah blah blah
           </p>
         </div>
-      </div>
-
-    </div>
+      </motion.div>
   )
 }
