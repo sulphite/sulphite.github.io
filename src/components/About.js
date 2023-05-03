@@ -19,7 +19,7 @@ export default function About() {
         className="about"
         initial={{opacity: 0, scale: 2}}
         animate={{opacity: 1, scale: 1}}
-        transition={{ type: "spring", ease: "easeInOut", duration: 0.5, delay: 0.7 }}
+        transition={{ type: "spring", ease: "easeInOut", duration: 0.5, delay: 0.9 }}
         id="about"
         ref={ref}>
         <motion.img src={pro}
@@ -32,7 +32,7 @@ export default function About() {
           <p>
             a full stack developer
             blah blah blah blah blah
-            making projects aesthetic as well as functional
+            making projects aesthetic and functional too
           </p>
         </div>
       </motion.div>

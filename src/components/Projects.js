@@ -24,21 +24,21 @@ export default function Projects() {
 
 
   const donut = {
-    init: {x: 900, opacity: 0, rotate: "50deg"},
-    anim: {rotate: "10deg", x: 0, opacity: 1, transition: {delay: 0.5, type: "spring", duration: 0.6, ease: "easeOut"}},
+    init: {x: 1200, opacity: 0, rotate: "50deg"},
+    anim: {rotate: "10deg", x: 0, opacity: 1, transition: {delay: 0.5, type: "spring", duration: 0.8, ease: "easeOut"}},
     hover: {scale: 1.1, transition: {ease: "easeOut", duration: 0.2}},
     nohover: {}
   }
 
   const aoy = {
     init: {x: 1500, y: 0, opacity: 0.5},
-    anim: {rotate: "-10deg", x: 90, y: 0, opacity: 1, transition: {delay: 0.3, type: "spring", duration: 0.6, ease: "easeOut"}},
+    anim: {rotate: "-10deg", x: 90, y: 0, opacity: 1, transition: {delay: 0.3, type: "spring", duration: 0.8, ease: "easeOut"}},
     hover: {scale: 1.05, transition: {ease: "easeOut", duration: 0.2}}
   }
 
   const gipf = {
-    init: {x: -1000, y: 800, opacity: 0.4},
-    anim: {rotate: "1deg", x: -80, y: 100, opacity: 1, transition: {type: "spring", duration: 0.6, ease: "easeOut"}},
+    init: {opacity: 0},
+    anim: {rotate: "1deg", x: -80, y: 100, opacity: 1, transition: {delay: 0, type: "spring", duration: 0.6, ease: "easeOut"}},
     hover: {scale: 1.1, transition: {ease: "easeOut", duration: 0.2}},
     nohover: {}
   }
