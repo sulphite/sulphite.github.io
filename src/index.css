@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=BioRhyme:wght@800&family=DM+Sans&display=swap');
+
 :root {
   --bg: #2D2433;
   --bg2: #3b5249;
@@ -17,18 +19,23 @@ body {
   color: var(--text);
   margin: 0;
   scroll-behavior: smooth;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: "DM Sans", -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  letter-spacing: 1px;
+  /* letter-spacing: 1px; */
   overflow-x: hidden;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+h1, h2, h3 {
+  font-family: "BioRhyme";
+  letter-spacing: 1px;
 }
 
 .nav {
@@ -69,13 +76,14 @@ code {
   height: calc(100vh - 90px);
   justify-content: center;
   align-items: center;
-  text-shadow: 2px 2px var(--primary);
   pointer-events: none;
 }
 
 .about img {
   max-height: 80vh;
 }
+
+.about p {font-size: 1.1rem;}
 
 .about--infos {
   pointer-events: auto;
@@ -85,6 +93,8 @@ code {
   border-radius: 8px;
   padding: 3em 2em;
 }
+
+.about--infos > h1 {text-shadow: 2px 2px var(--primary);}
 
 
 .container {

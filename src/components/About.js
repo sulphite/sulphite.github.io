@@ -22,12 +22,17 @@ export default function About() {
         transition={{ type: "spring", ease: "easeInOut", duration: 0.5, delay: 0.7 }}
         id="about"
         ref={ref}>
-        <img src={pro} />
+        <motion.img src={pro}
+          animate={{y: [0,5,0,-5,0]}}
+          transition={{duration: 4, repeat: Infinity, ease: "linear"}}
+        />
         <div className="about--infos">
-          <h1>ABOUT DIV HERE</h1>
+          <p>Hi there, I'm</p>
+          <h1>Jana Gerrard !</h1>
           <p>
-            some example text i'm a full stack developer
+            a full stack developer
             blah blah blah blah blah
+            making projects aesthetic as well as functional
           </p>
         </div>
       </motion.div>
