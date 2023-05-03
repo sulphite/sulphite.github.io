@@ -70,7 +70,7 @@ export default function Projects() {
       <motion.div
         ref={aoy_ref}
         variants={aoy}
-        className='project-container fixed'
+        className='project-container paper fixed'
         id="aoy"
         initial="init"
         animate="anim"
