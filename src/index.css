@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=BioRhyme:wght@800&family=DM+Sans&display=swap');
 
 :root {
-  --bg: #2D2433;
-  --bg2: #3b5249;
-  --primary: #519872;
+  --bg: #e6e8d9;
+  --bg2: #433f4e;
+  --primary: #459075;
   --text: #a4b494;
   --lighter: #bec5ad;
+  --accent: rgb(255, 78, 75);
   /* font-size: calc(10px + 2vmin); */
   font-size: 16px;
 }
@@ -26,6 +27,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
   /* letter-spacing: 1px; */
   overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: var(--accent)
 }
 
 code {
@@ -182,6 +188,7 @@ h1, h2, h3 {
   .tidy-up {
     margin: 3em auto;
     display: block;
+    cursor: pointer;
   }
 
   .fixed {

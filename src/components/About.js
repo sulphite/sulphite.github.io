@@ -1,4 +1,4 @@
-import pro from "../assets/narcissa.png"
+import pro from "../assets/selfy2.png"
 import { motion, useInView } from "framer-motion"
 import { useEffect, useRef } from "react"
 

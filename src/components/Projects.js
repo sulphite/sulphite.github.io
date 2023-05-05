@@ -1,6 +1,10 @@
 import { motion, useInView } from "framer-motion"
 import { useEffect, useRef } from "react"
 import projectdata from "../data"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faLink } from "@fortawesome/free-solid-svg-icons";
+
 
 const ProjectInner = (props) => {
   console.log(props)
@@ -8,8 +12,8 @@ const ProjectInner = (props) => {
     <div className="project-details">
       <h3>{props.data.title}</h3>
       <p>{props.data.description}</p>
-      <a href={props.data.github}>github</a>
-      <a href={props.data.url}>link</a>
+      <a href={props.data.github}><FontAwesomeIcon icon={faGithub} /> github</a>
+      <a href={props.data.url}><FontAwesomeIcon icon={faLink} /> live project link</a>
     </div>
   )
 }
@@ -31,7 +35,7 @@ export default function Projects() {
   }
 
   const aoy = {
-    init: {x: 1500, y: 0, opacity: 0.5},
+    init: {x: -1500, y: 0, opacity: 0.5},
     anim: {rotate: "-10deg", x: 90, y: 0, opacity: 1, transition: {delay: 0.3, type: "spring", duration: 0.8, ease: "easeOut"}},
     hover: {scale: 1.05, transition: {ease: "easeOut", duration: 0.2}}
   }
