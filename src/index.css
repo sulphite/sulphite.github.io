@@ -1,15 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=BioRhyme:wght@800&family=DM+Sans&display=swap');
+
 :root {
-  --bg: #2D2433;
-  --bg2: #3b5249;
-  --primary: #519872;
+  --bg: #e6e8d9;
+  --bg2: #433f4e;
+  --primary: #459075;
   --text: #a4b494;
   --lighter: #bec5ad;
+  --accent: rgb(255, 78, 75);
   /* font-size: calc(10px + 2vmin); */
   font-size: 16px;
 }
 
 * {
   margin: 0;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -17,13 +21,18 @@ body {
   color: var(--text);
   margin: 0;
   scroll-behavior: smooth;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: "DM Sans", -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  letter-spacing: 1px;
+  /* letter-spacing: 1px; */
   overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: var(--accent)
 }
 
 code {
@@ -31,13 +40,20 @@ code {
     monospace;
 }
 
+h1, h2, h3 {
+  font-family: "BioRhyme";
+  letter-spacing: 1px;
+  line-height: 0.9;
+}
+
 .nav {
   display: flex;
+  width: calc(100% - 32px);
   gap: 1em;
   padding: 1em;
   justify-content: space-between;
   align-items: center;
-  position: sticky;
+  position: fixed;
   top:0;
   z-index: 99;
   background: linear-gradient(var(--bg),transparent);
@@ -51,45 +67,55 @@ code {
 }
 
 .btn {
-  font-size: 0.8rem;
+  font-size: 1rem;
+  font-family: "DM Sans";
   font-weight: bold;
   letter-spacing: 1px;
   border: 0;
-  border-radius: 2px;
-  padding: 0.5em 1em;
+  border-radius: 1.5em;
+  padding: 0.8em 1em;
   background-color: var(--primary);
   color: var(--lighter);
+  cursor: pointer;
+  text-align: center;
 }
 
 .about {
   z-index: 50;
   position: relative;
   display: flex;
+  flex-direction: column;
   width: 100%;
-  height: calc(100vh - 90px);
+  height: 100vh;
   justify-content: center;
   align-items: center;
-  text-shadow: 2px 2px var(--primary);
-  pointer-events: none;
 }
 
 .about img {
   max-height: 80vh;
+  display: none;
 }
+
+.about p {font-size: 1.1rem;}
 
 .about--infos {
   pointer-events: auto;
-  width: 25%;
-  background: #bec5ad9f;
+  width: 70vw;
+  background: var(--bg2);
   color: var(--bg);
   border-radius: 8px;
-  padding: 3em 2em;
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
 }
+
+.about--infos > h1 {text-shadow: 2px 2px var(--primary);}
 
 
 .container {
   width: 100%;
-  min-height: 200vh;
+  min-height: 100vh;
   margin: 0 auto;
   position: relative;
   /* display: flex;
@@ -99,14 +125,15 @@ code {
 }
 
 .project-container {
-  width: 50vw;
-  height: 50vh;
+  width: 80vw;
+  height: 70vh;
   background: var(--bg2);
   border: 3px solid var(--primary);
   position: relative;
-  top: 20vh;
-  left: 25vw;
+  top: 15vh;
+  left: 10vw;
   box-shadow: 2px 2px 16px rgba(0,0,0,0.3);
+  overflow: hidden;
 }
 
 .project-details {
@@ -117,6 +144,12 @@ code {
   gap: 0.5em;
 }
 
+#projects {scroll-behavior: smooth;}
+
+.project-image {
+  max-width: 100%;
+}
+
 .fixed {
   position: fixed;
 }
@@ -124,17 +157,65 @@ code {
 #donut {
   background: var(--primary);
   color: var(--bg);
-  z-index: 40;
 }
 
-#aoy {
-  z-index: 30;
-}
-
-#gipf {
-  z-index: 20;
+.paper {
+  background-color: #DAD1B5;
+  border-image-source: url("./assets/edge\ ver\ 2.png");
+  border-image-slice: 5% fill;
+  border-image-repeat: round;
+  border-image-outset: 20px;
+  border-image-width: 20px;
 }
 
 .tidy-up {
-  margin: 3em auto;
+  display: none;
+}
+
+@media (min-width: 800px) {
+  .about--infos {
+    width: 25%;
+  }
+
+  .about {
+    flex-direction: row;
+  }
+
+  .about img {
+    max-height: 80vh;
+    display: block;
+  }
+
+  .project-container {
+    width: 50vw;
+    height: fit-content;
+    position: relative;
+    top: 20vh;
+    left: 25vw;
+    box-shadow: 2px 2px 16px rgba(0,0,0,0.3);
+  }
+
+  .project-inner {
+    display: flex;
+    flex-direction: row;
+
+
+  }
+
+  .project-image {
+    align-self: center;
+    margin: 0.5em;
+    max-width: 100%;
+  }
+
+  .tidy-up {
+    margin: 3em auto;
+    display: block;
+    cursor: pointer;
+    z-index: 100;
+  }
+
+  .fixed {
+    position: fixed;
+  }
 }

@@ -3,8 +3,8 @@ import Navbar from "./components/Navbar"
 import About from "./components/About"
 import Projects from "./components/Projects"
 
-
 function App() {
+
   const tidyUp = () => {
     window.scrollTo({top: 0, behavior: "smooth"})
   }

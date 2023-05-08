@@ -12,6 +12,13 @@ const projectdata = {
     github: "https://github.com/nikstojkov/AllofYou",
     url: "www.allofyou.art",
     image_url: ""
+  },
+  hack: {
+    title: "Salvation as a Service",
+    description: "",
+    github: "",
+    url: "",
+    image_url: ""
   }
 }
 
