@@ -13,6 +13,7 @@
 
 * {
   margin: 0;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -64,14 +65,17 @@ h1, h2, h3 {
 }
 
 .btn {
-  font-size: 0.8rem;
+  font-size: 1rem;
+  font-family: "DM Sans";
   font-weight: bold;
   letter-spacing: 1px;
   border: 0;
-  border-radius: 2px;
-  padding: 0.5em 1em;
+  border-radius: 1.5em;
+  padding: 0.8em 1em;
   background-color: var(--primary);
   color: var(--lighter);
+  cursor: pointer;
+  text-align: center;
 }
 
 .about {
@@ -100,6 +104,9 @@ h1, h2, h3 {
   color: var(--bg);
   border-radius: 8px;
   padding: 3em 2em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8em;
 }
 
 .about--infos > h1 {text-shadow: 2px 2px var(--primary);}
@@ -107,7 +114,7 @@ h1, h2, h3 {
 
 .container {
   width: 100%;
-  min-height: 200vh;
+  min-height: 100vh;
   margin: 0 auto;
   position: relative;
   /* display: flex;
@@ -135,6 +142,8 @@ h1, h2, h3 {
   margin: 0;
   gap: 0.5em;
 }
+
+#projects {scroll-behavior: smooth;}
 
 .project-image {
   max-width: 100%;
@@ -211,6 +220,7 @@ h1, h2, h3 {
     margin: 3em auto;
     display: block;
     cursor: pointer;
+    z-index: 100;
   }
 
   .fixed {

@@ -3,15 +3,15 @@ import { motion, useInView } from "framer-motion"
 import { useEffect, useRef } from "react"
 
 export default function About() {
-  const ref = useRef(null)
-  const isInView = useInView(ref)
+  // const ref = useRef(null)
+  // const isInView = useInView(ref)
 
-  useEffect(() => {
-    const nextItem = document.getElementById("donut")
-    // when gipf element out of view, getnew element and apply
-    isInView ? nextItem.classList.add("fixed") : nextItem.classList.remove("fixed")
+  // useEffect(() => {
+  //   const nextItem = document.getElementById("donut")
+  //   // when gipf element out of view, getnew element and apply
+  //   isInView ? nextItem.classList.add("fixed") : nextItem.classList.remove("fixed")
 
-  }, [isInView])
+  // }, [isInView])
 
   return (
       <motion.div
@@ -20,7 +20,7 @@ export default function About() {
         animate={{opacity: 1, scale: 1}}
         transition={{ type: "spring", ease: "easeInOut", duration: 0.5, delay: 0.9 }}
         id="about"
-        ref={ref}>
+        >
         <motion.img src={pro}
           animate={{y: [0,5,0,-5,0]}}
           transition={{duration: 4, repeat: Infinity, ease: "linear"}}
@@ -33,6 +33,7 @@ export default function About() {
             blah blah blah blah blah
             making projects aesthetic and functional too
           </p>
+          <a href="#projects" className="btn">To projects</a>
         </div>
       </motion.div>
   )
