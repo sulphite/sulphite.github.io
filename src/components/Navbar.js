@@ -6,11 +6,7 @@ export default function Navbar() {
   const [display, setDisplay] = useState(false)
 
   useMotionValueEvent(scrollY, "change", (latest) => {
-    if(latest > 200) {
-      setDisplay(true)
-    } else {
-      setDisplay(false)
-    }
+    latest > 200 ? setDisplay(true) : setDisplay(false);
   })
 
   return (
