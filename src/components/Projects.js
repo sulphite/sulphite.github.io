@@ -4,10 +4,10 @@ import projectdata from "../data"
 import ProjectInner from "./ProjectInner"
 
 export default function Projects() {
-  const donut_ref = useRef(null)
-  const donutInView = useInView(donut_ref, {margin: "-200px"})
-  const aoy_ref = useRef(null)
-  const aoyInView = useInView(aoy_ref, {margin: "-200px"})
+  // const donut_ref = useRef(null)
+  // const donutInView = useInView(donut_ref, {margin: "-200px"})
+  // const aoy_ref = useRef(null)
+  // const aoyInView = useInView(aoy_ref, {margin: "-200px"})
 
   const isMobile = window.innerWidth < 600;
   const generatePosition = (axis) => {
@@ -58,7 +58,6 @@ export default function Projects() {
     <div className='container' id="projects">
       <motion.div
         drag
-        ref={donut_ref}
         variants={donut}
         className='project-container fixed'
         id="donut"
@@ -71,7 +70,6 @@ export default function Projects() {
 
       <motion.div
         drag
-        ref={aoy_ref}
         variants={aoy}
         className='project-container paper fixed'
         id="aoy"
