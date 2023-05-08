@@ -1,8 +1,8 @@
 import pro from "../assets/selfy2.png"
 import { motion, useInView } from "framer-motion"
-import { useEffect, useRef } from "react"
+import { forwardRef, useEffect, useRef } from "react"
 
-export default function About() {
+const About = forwardRef((ref) => {
   // const ref = useRef(null)
   // const isInView = useInView(ref)
 
@@ -16,6 +16,7 @@ export default function About() {
   return (
       <motion.div
         className="about"
+        ref={ref}
         initial={{opacity: 0, scale: 2}}
         animate={{opacity: 1, scale: 1}}
         transition={{ type: "spring", ease: "easeInOut", duration: 0.5, delay: 0.9 }}
@@ -37,4 +38,6 @@ export default function About() {
         </div>
       </motion.div>
   )
-}
+})
+
+export default About
