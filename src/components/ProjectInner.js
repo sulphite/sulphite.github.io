@@ -3,7 +3,6 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faLink } from "@fortawesome/free-solid-svg-icons";
 
 const ProjectInner = (props) => {
-  console.log(props)
   return (
     <div className="project-inner">
       <img src="https://placehold.co/400x250" className="project-image"/>
