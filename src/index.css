@@ -43,6 +43,7 @@ code {
 h1, h2, h3 {
   font-family: "BioRhyme";
   letter-spacing: 1px;
+  line-height: 0.9;
 }
 
 .nav {
@@ -87,7 +88,6 @@ h1, h2, h3 {
   height: calc(100vh - 90px);
   justify-content: center;
   align-items: center;
-  pointer-events: none;
 }
 
 .about img {
@@ -103,10 +103,10 @@ h1, h2, h3 {
   background: var(--bg2);
   color: var(--bg);
   border-radius: 8px;
-  padding: 3em 2em;
+  padding: 2em;
   display: flex;
   flex-direction: column;
-  gap: 0.8em;
+  gap: 1em;
 }
 
 .about--infos > h1 {text-shadow: 2px 2px var(--primary);}
@@ -156,7 +156,6 @@ h1, h2, h3 {
 #donut {
   background: var(--primary);
   color: var(--bg);
-  z-index: 40;
 }
 
 .paper {
@@ -166,14 +165,6 @@ h1, h2, h3 {
   border-image-repeat: round;
   border-image-outset: 20px;
   border-image-width: 20px;
-}
-
-#aoy {
-  z-index: 30;
-}
-
-#gipf {
-  z-index: 20;
 }
 
 .tidy-up {

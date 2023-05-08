@@ -17,30 +17,29 @@ export default function Projects() {
     console.log(value)
     return value
   }
-  generatePosition()
 
-  const project = {
-    init: {x: generatePosition("x"), y: generatePosition("y"), opacity: 0},
-    anim: {opacity: 1, transition: {delay: 0.5, type: "spring", duration: 0.8, ease: "easeOut"}},
-    hover: {scale: 1.05, transition: {ease: "easeOut", duration: 0.2}}
-  }
+  // const project = {
+  //   init: {x: generatePosition("x"), y: generatePosition("y"), opacity: 0},
+  //   anim: {opacity: 1, transition: {delay: 0.5, type: "spring", duration: 0.8, ease: "easeOut"}},
+  //   hover: {scale: 1.05, zIndex: 40, transition: {ease: "easeOut", duration: 0.2}}
+  // }
 
   const donut = {
     init: {opacity: 0},
     anim: {rotate: "5deg", x: generatePosition("x"), y: generatePosition("y"), opacity: 1, transition: {delay: 0.5, type: "spring", duration: 0.8, ease: "easeOut"}},
-    hover: {scale: 1.1, transition: {ease: "easeOut", duration: 0.2}},
+    hover: {scale: 1.1, zIndex: 40, transition: {ease: "easeOut", duration: 0.2}},
   }
 
   const aoy = {
     init: {opacity: 0},
     anim: {rotate: "-5deg", x: generatePosition("x"), y: generatePosition("y"), opacity: 1, transition: {delay: 0.3, type: "spring", duration: 0.8, ease: "easeOut"}},
-    hover: {scale: 1.05, transition: {ease: "easeOut", duration: 0.2}},
+    hover: {scale: 1.05, zIndex: 40, transition: {ease: "easeOut", duration: 0.2}},
   }
 
   const gipf = {
     init: {opacity: 0},
     anim: {rotate: "1deg", x: generatePosition("x"), y: generatePosition("y"), opacity: 1, transition: {delay: 0, type: "spring", duration: 0.6, ease: "easeOut"}},
-    hover: {scale: 1.1, transition: {ease: "easeOut", duration: 0.2}},
+    hover: {scale: 1.1, zIndex: 40, transition: {ease: "easeOut", duration: 0.2}},
   }
 
   // useEffect(() => {
@@ -58,37 +57,40 @@ export default function Projects() {
     <div className='container' id="projects">
       <motion.div
         drag
+        dragMomentum={false}
         variants={donut}
         className='project-container fixed'
         id="donut"
         initial="init"
         animate="anim"
         whileHover="hover"
-        whileDrag={{zIndex: 70 }}>
+        whileDrag={{zIndex: 40 }}>
           <ProjectInner data={projectdata.donut} />
       </motion.div>
 
       <motion.div
         drag
+        dragMomentum={false}
         variants={aoy}
         className='project-container paper fixed'
         id="aoy"
         initial="init"
         animate="anim"
         whileHover="hover"
-        whileDrag={{zIndex: 70 }}>
+        whileDrag={{zIndex: 40 }}>
           <ProjectInner data={projectdata.aoy} />
       </motion.div>
 
       <motion.div
         drag
+        dragMomentum={false}
         variants={gipf}
         className='project-container fixed'
         id="gipf"
         initial="init"
         animate="anim"
         whileHover="hover"
-        whileDrag={{zIndex: 70 }}>
+        whileDrag={{zIndex: 40 }}>
           <ProjectInner data={projectdata.hack} />
       </motion.div>
     </div>
