@@ -9,7 +9,13 @@ export default function Projects() {
   const aoy_ref = useRef(null)
   const aoyInView = useInView(aoy_ref, {margin: "-200px"})
 
+  const isMobile = window.innerWidth < 600;
 
+  const project = {
+    init: {opacity: 0},
+    anim: {x: 0, opacity: 1, transition: {delay: 0.5, type: "spring", duration: 0.8, ease: "easeOut"}},
+    hover: {scale: 1.05, transition: {ease: "easeOut", duration: 0.2}}
+  }
 
   const donut = {
     init: {x: 1200, opacity: 0, rotate: "50deg"},
@@ -45,8 +51,9 @@ export default function Projects() {
   return (
     <div className='container' id="projects">
       <motion.div
+        drag
         ref={donut_ref}
-        variants={donut}
+        variants={project}
         className='project-container fixed'
         id="donut"
         initial="init"
@@ -56,8 +63,9 @@ export default function Projects() {
       </motion.div>
 
       <motion.div
+        drag
         ref={aoy_ref}
-        variants={aoy}
+        variants={project}
         className='project-container paper fixed'
         id="aoy"
         initial="init"
@@ -67,7 +75,8 @@ export default function Projects() {
       </motion.div>
 
       <motion.div
-        variants={gipf}
+        drag
+        variants={project}
         className='project-container fixed'
         id="gipf"
         initial="init"
