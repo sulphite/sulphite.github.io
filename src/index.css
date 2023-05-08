@@ -96,7 +96,7 @@ h1, h2, h3 {
 .about--infos {
   pointer-events: auto;
   width: 70vw;
-  background: #bec5ad9f;
+  background: var(--bg2);
   color: var(--bg);
   border-radius: 8px;
   padding: 3em 2em;
@@ -117,7 +117,7 @@ h1, h2, h3 {
 }
 
 .project-container {
-  width: 70vw;
+  width: 80vw;
   height: 70vh;
   background: var(--bg2);
   border: 3px solid var(--primary);
@@ -136,6 +136,10 @@ h1, h2, h3 {
   gap: 0.5em;
 }
 
+.project-image {
+  max-width: 100%;
+}
+
 .fixed {
   position: fixed;
 }
@@ -146,7 +150,14 @@ h1, h2, h3 {
   z-index: 40;
 }
 
-
+.paper {
+  background-color: #DAD1B5;
+  border-image-source: url("./assets/edge\ ver\ 2.png");
+  border-image-slice: 5% fill;
+  border-image-repeat: round;
+  border-image-outset: 20px;
+  border-image-width: 20px;
+}
 
 #aoy {
   z-index: 30;
@@ -176,13 +187,24 @@ h1, h2, h3 {
 
   .project-container {
     width: 50vw;
-    height: 50vh;
-    background: var(--bg2);
-    border: 3px solid var(--primary);
+    height: fit-content;
     position: relative;
     top: 20vh;
     left: 25vw;
     box-shadow: 2px 2px 16px rgba(0,0,0,0.3);
+  }
+
+  .project-inner {
+    display: flex;
+    flex-direction: row;
+
+
+  }
+
+  .project-image {
+    align-self: center;
+    margin: 0.5em;
+    max-width: 100%;
   }
 
   .tidy-up {
@@ -193,14 +215,5 @@ h1, h2, h3 {
 
   .fixed {
     position: fixed;
-  }
-
-  .paper {
-    background-color: #DAD1B5;
-    border-image-source: url("./assets/edge\ ver\ 2.png");
-    border-image-slice: 5% fill;
-    border-image-repeat: round;
-    border-image-outset: 20px;
-    border-image-width: 20px;
   }
 }

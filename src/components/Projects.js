@@ -20,7 +20,7 @@ export default function Projects() {
 
   const aoy = {
     init: {x: -1500, y: 0, opacity: 0.5},
-    anim: {rotate: "-10deg", x: 90, y: 0, opacity: 1, transition: {delay: 0.3, type: "spring", duration: 0.8, ease: "easeOut"}},
+    anim: {rotate: "-10deg", x: 90, y: 80, opacity: 1, transition: {delay: 0.3, type: "spring", duration: 0.8, ease: "easeOut"}},
     hover: {scale: 1.05, transition: {ease: "easeOut", duration: 0.2}}
   }
 
@@ -72,7 +72,8 @@ export default function Projects() {
         id="gipf"
         initial="init"
         animate="anim"
-        whileHover="hover">gipf project
+        whileHover="hover">
+          <ProjectInner data={projectdata.hack} />
       </motion.div>
     </div>
   )
