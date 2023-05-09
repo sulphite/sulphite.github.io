@@ -46,6 +46,14 @@ export default function Projects() {
     document.querySelector(".instructions").classList.add("display-none")
   }
 
+
+  const setSelected = (e) => {
+    let selected = document.querySelectorAll(".project-container");
+    selected.forEach(item => item.style.zIndex = 0)
+    e.currentTarget.style.zIndex = 46
+  }
+
+
   // useEffect(() => {
   //   const nextItem = document.getElementById("aoy")
   //   donutInView ? nextItem.classList.add("fixed") : nextItem.classList.remove("fixed")
@@ -68,6 +76,7 @@ export default function Projects() {
         <span className="close" onClick={close}>✕</span>
       </motion.div>}
       <motion.div
+        onMouseDown={setSelected}
         drag
         dragMomentum={false}
         variants={donut}
@@ -81,6 +90,7 @@ export default function Projects() {
       </motion.div>
 
       <motion.div
+        onMouseDown={setSelected}
         drag
         dragMomentum={false}
         variants={aoy}
@@ -94,6 +104,7 @@ export default function Projects() {
       </motion.div>
 
       <motion.div
+        onMouseDown={setSelected}
         drag
         dragMomentum={false}
         variants={gipf}

@@ -225,8 +225,6 @@ h1, h2, h3 {
     padding: 1.2em;
     display: grid;
     grid-template-columns: 1fr 1fr;
-
-
   }
 
   .project-image {
