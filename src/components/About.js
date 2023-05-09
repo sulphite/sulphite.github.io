@@ -1,22 +1,11 @@
 import pro from "../assets/selfy2.png"
-import { motion, useInView } from "framer-motion"
-import { forwardRef, useEffect, useRef } from "react"
+import { motion } from "framer-motion"
 
-const About = forwardRef((ref) => {
-  // const ref = useRef(null)
-  // const isInView = useInView(ref)
-
-  // useEffect(() => {
-  //   const nextItem = document.getElementById("donut")
-  //   // when gipf element out of view, getnew element and apply
-  //   isInView ? nextItem.classList.add("fixed") : nextItem.classList.remove("fixed")
-
-  // }, [isInView])
+const About = () => {
 
   return (
       <motion.div
         className="about"
-        ref={ref}
         initial={{opacity: 0, scale: 2}}
         animate={{opacity: 1, scale: 1}}
         transition={{ type: "spring", ease: "easeInOut", duration: 0.5, delay: 0.9 }}
@@ -34,10 +23,15 @@ const About = forwardRef((ref) => {
             blah blah blah blah blah
             making projects aesthetic and functional too
           </p>
-          <a href="#projects" className="btn">To projects</a>
+          <motion.a
+            href="#projects"
+            className="btn"
+            whileHover={{scale: 1.05}}
+            whileTap={{scale: 0.9}}
+            >To projects</motion.a>
         </div>
       </motion.div>
   )
-})
+}
 
 export default About
