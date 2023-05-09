@@ -165,6 +165,7 @@ h1, h2, h3 {
   flex-direction: column;
   margin: 0;
   gap: 0.5em;
+  text-align: justify;
 }
 
 #projects {scroll-behavior: smooth;}
@@ -195,6 +196,8 @@ h1, h2, h3 {
   display: none;
 }
 
+.display-none {display: none;}
+
 @media (min-width: 800px) {
   .about--infos {
     width: 25%;
@@ -210,7 +213,7 @@ h1, h2, h3 {
   }
 
   .project-container {
-    width: 50vw;
+    width: 600px;
     height: fit-content;
     position: relative;
     top: 20vh;
@@ -242,5 +245,29 @@ h1, h2, h3 {
 
   .end {
     justify-content: flex-end;
+  }
+
+  .instructions {
+    z-index: 49;
+    font-size: 1.2rem;
+    background-color: var(--bg);
+    color: var(--bg2);
+    padding: 2em;
+    border-radius: 1em;
+    position: fixed;
+    top: 45%;
+    left: calc(50% - 100px);
+    width: 200px;
+    text-align: center;
+  }
+
+  .close {
+    position:absolute;
+    top: 0.5em;
+    right: 0.5em;
+    font-weight: bold;
+    padding: 0.25em;
+    cursor: pointer;
+    color: var(--accent);
   }
 }

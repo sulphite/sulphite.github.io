@@ -42,6 +42,10 @@ export default function Projects() {
     hover: {scale: 1.1, zIndex: 40, transition: {ease: "easeOut", duration: 0.2}},
   }
 
+  const close = () => {
+    document.querySelector(".instructions").classList.add("display-none")
+  }
+
   // useEffect(() => {
   //   const nextItem = document.getElementById("aoy")
   //   donutInView ? nextItem.classList.add("fixed") : nextItem.classList.remove("fixed")
@@ -55,6 +59,14 @@ export default function Projects() {
 
   return (
     <div className='container' id="projects">
+      {!isMobile && <motion.div
+        className="instructions"
+        initial={{opacity: 0}}
+        animate={{opacity: 0.8, transition: {delay: 1}}}
+        drag>
+        Click and drag to look around!
+        <span className="close" onClick={close}>✕</span>
+      </motion.div>}
       <motion.div
         drag
         dragMomentum={false}
