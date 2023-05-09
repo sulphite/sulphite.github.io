@@ -114,8 +114,8 @@ export default function Projects() {
         dragMomentum={false}>
         get in touch:
         <a>janett.gerrard@gmail.com</a>
-        <a>linkedin</a>
-        <a>github</a>
+        <a href="https://www.linkedin.com/in/jfgerrard/">linkedin</a>
+        <a href="https://github.com/sulphite">github</a>
       </motion.div>
     </div>
   )
