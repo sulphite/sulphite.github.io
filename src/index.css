@@ -222,6 +222,7 @@ h1, h2, h3 {
   }
 
   .project-inner {
+    padding: 1.2em;
     display: grid;
     grid-template-columns: 1fr 1fr;
 
@@ -269,5 +270,16 @@ h1, h2, h3 {
     padding: 0.25em;
     cursor: pointer;
     color: var(--accent);
+  }
+  .contact {
+    position: fixed;
+    max-width: 300px;
+    top: 4em;
+    right: 4em;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+
   }
 }

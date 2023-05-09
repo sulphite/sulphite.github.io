@@ -105,6 +105,18 @@ export default function Projects() {
         whileDrag={{zIndex: 40 }}>
           <ProjectInner data={projectdata.hack} />
       </motion.div>
+
+      <motion.div
+        className="contact paper"
+        initial={{y: -500 }}
+        animate={{y: 0, transition: {duration: 0.8, delay: 1, type: "spring"}}}
+        drag
+        dragMomentum={false}>
+        get in touch:
+        <a>janett.gerrard@gmail.com</a>
+        <a>linkedin</a>
+        <a>github</a>
+      </motion.div>
     </div>
   )
 }
