@@ -5,15 +5,21 @@ import { faLink } from "@fortawesome/free-solid-svg-icons";
 const ProjectInner = (props) => {
   return (
     <div className="project-inner">
-      <div>
-      <img src={props.data.image_url} className="project-image"/>
-
-      </div>
       <div className="project-details">
         <h3>{props.data.title}</h3>
         <p>{props.data.description}</p>
+      </div>
+      <div className="project-details">
+      <img src={props.data.image_url} className="project-image"/>
+      <div className="flex-row end">
         <a href={props.data.github}><FontAwesomeIcon icon={faGithub} /> github</a>
-        <a href={props.data.url}><FontAwesomeIcon icon={faLink} /> live project link</a>
+        <a href={props.data.url}><FontAwesomeIcon icon={faLink} /> live demo</a>
+      </div>
+      <div className="flex-row end">
+      {props.data.tools.map((item) => {
+        return <span className="tool">{item}</span>
+      })}
+      </div>
       </div>
     </div>
   )
