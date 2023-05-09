@@ -136,8 +136,15 @@ h1, h2, h3 {
   overflow: hidden;
 }
 
+.project-inner {
+  padding: 0.5em;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  gap: 1em
+}
+
 .project-details {
-  padding: 1em;
   display: flex;
   flex-direction: column;
   margin: 0;
@@ -196,16 +203,14 @@ h1, h2, h3 {
   }
 
   .project-inner {
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 
 
   }
 
   .project-image {
     align-self: center;
-    margin: 0.5em;
-    max-width: 100%;
   }
 
   .tidy-up {

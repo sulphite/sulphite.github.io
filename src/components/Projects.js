@@ -10,10 +10,10 @@ export default function Projects() {
   // const aoyInView = useInView(aoy_ref, {margin: "-200px"})
 
   const isMobile = window.innerWidth < 600;
-  const generatePosition = (axis) => {
+  const generatePosition = (axis, plus = true) => {
     let width = (axis === "x") ? window.innerWidth : window.innerHeight
-    let value = Math.floor(Math.random() * width/2 - 200)
-    value = Math.random() > 0.5 ? value : -value
+    let value = Math.floor(Math.random() * width/3)
+    value = plus ? value : -value
     console.log(value)
     return value
   }
@@ -26,19 +26,19 @@ export default function Projects() {
 
   const donut = {
     init: {opacity: 0},
-    anim: {rotate: "5deg", x: generatePosition("x"), y: generatePosition("y"), opacity: 1, transition: {delay: 0.5, type: "spring", duration: 0.8, ease: "easeOut"}},
+    anim: {rotate: "5deg", x: generatePosition("x", true), y: generatePosition("y", true), opacity: 1, transition: {delay: 0.5, type: "spring", duration: 0.8, ease: "easeOut"}},
     hover: {scale: 1.1, zIndex: 40, transition: {ease: "easeOut", duration: 0.2}},
   }
 
   const aoy = {
     init: {opacity: 0},
-    anim: {rotate: "-5deg", x: generatePosition("x"), y: generatePosition("y"), opacity: 1, transition: {delay: 0.3, type: "spring", duration: 0.8, ease: "easeOut"}},
+    anim: {rotate: "-5deg", x: generatePosition("x", false), y: generatePosition("y", true), opacity: 1, transition: {delay: 0.3, type: "spring", duration: 0.8, ease: "easeOut"}},
     hover: {scale: 1.05, zIndex: 40, transition: {ease: "easeOut", duration: 0.2}},
   }
 
   const gipf = {
     init: {opacity: 0},
-    anim: {rotate: "1deg", x: generatePosition("x"), y: generatePosition("y"), opacity: 1, transition: {delay: 0, type: "spring", duration: 0.6, ease: "easeOut"}},
+    anim: {rotate: "1deg", x: generatePosition("x", false), y: generatePosition("y", false), opacity: 1, transition: {delay: 0, type: "spring", duration: 0.6, ease: "easeOut"}},
     hover: {scale: 1.1, zIndex: 40, transition: {ease: "easeOut", duration: 0.2}},
   }
 

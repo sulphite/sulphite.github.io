@@ -5,7 +5,10 @@ import { faLink } from "@fortawesome/free-solid-svg-icons";
 const ProjectInner = (props) => {
   return (
     <div className="project-inner">
-      <img src="https://placehold.co/400x250" className="project-image"/>
+      <div>
+      <img src={props.data.image_url} className="project-image"/>
+
+      </div>
       <div className="project-details">
         <h3>{props.data.title}</h3>
         <p>{props.data.description}</p>
