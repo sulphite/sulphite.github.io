@@ -3,13 +3,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
-const Contact = () => {
+const Contact = (props) => {
   return (
     <motion.div
     className="contact paper"
     initial={{y: -500 }}
     animate={{y: 0, transition: {duration: 0.8, delay: 1, type: "spring"}}}
-    drag
+    drag={!props.mobile}
     dragSnapToOrigin
     dragPropagation
     dragMomentum={false}>

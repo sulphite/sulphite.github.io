@@ -10,6 +10,7 @@ export default function Projects() {
   // const aoyInView = useInView(aoy_ref, {margin: "-200px"})
 
   const isMobile = window.innerWidth < 600;
+  console.log("width = ", window.innerWidth, isMobile)
   const generatePosition = (axis, plus = true) => {
     let width = (axis === "x") ? window.innerWidth : window.innerHeight
     let value = Math.floor(Math.random() * width/3)
@@ -23,6 +24,12 @@ export default function Projects() {
   //   anim: {opacity: 1, transition: {delay: 0.5, type: "spring", duration: 0.8, ease: "easeOut"}},
   //   hover: {scale: 1.05, zIndex: 40, transition: {ease: "easeOut", duration: 0.2}}
   // }
+
+  const mobile = {
+    init: {opacity: 0},
+    anim: {opacity: 1, transition: {delay: 0.5, type: "spring", duration: 0.8, ease: "easeOut"}},
+    hover: {scale: 1.1, zIndex: 40, transition: {ease: "easeOut", duration: 0.2}},
+  }
 
   const donut = {
     init: {opacity: 0},
@@ -78,9 +85,9 @@ export default function Projects() {
 
       <motion.div
         onMouseDown={setSelected}
-        drag
+        drag={!isMobile}
         dragMomentum={false}
-        variants={donut}
+        variants={isMobile ? mobile : donut}
         className='project-container fixed'
         id="donut"
         initial="init"
@@ -92,9 +99,9 @@ export default function Projects() {
 
       <motion.div
         onMouseDown={setSelected}
-        drag
+        drag={!isMobile}
         dragMomentum={false}
-        variants={aoy}
+        variants={isMobile ? mobile : aoy}
         className='project-container paper fixed'
         id="aoy"
         initial="init"
@@ -106,10 +113,10 @@ export default function Projects() {
 
       <motion.div
         onMouseDown={setSelected}
-        drag
+        drag={!isMobile}
         dragPropagation
         dragMomentum={false}
-        variants={gipf}
+        variants={isMobile ? mobile : gipf}
         className='project-container fixed'
         id="gipf"
         initial="init"
@@ -119,7 +126,7 @@ export default function Projects() {
           <ProjectInner data={projectdata.hack} />
       </motion.div>
 
-      <Contact />
+      <Contact mobile={isMobile} />
     </div>
   )
 }
