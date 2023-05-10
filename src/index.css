@@ -144,18 +144,18 @@ h1, h2, h3 {
 
 .container {
   width: 100%;
-  max-height: 100vh;
   margin: 0;
-  /* display: flex;
-  gap: 2em; */
-  padding: 0 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2em;
+  padding: 3em 0;
   /* overflow-x: scroll; */
 }
 
 .project-container {
   z-index: 2;
   position: relative;
-  margin-top: 2em;
   width: 85vw;
   flex-basis: 85vw;
   height: min-content;
@@ -215,15 +215,17 @@ h1, h2, h3 {
 }
 
 .contact {
-  max-width: 300px;
+  max-width: 70vw;
   margin: 2em 0;
-  padding: 1em;
-  line-height: 1.4;
+  line-height: 1.5;
+  padding: 1.5em;
+  position: relative;
+  z-index: 10;
 }
 
 .contact > ul {
   list-style: none;
-  padding: 0
+  padding: 0;
 }
 
 .display-none {display: none;}
