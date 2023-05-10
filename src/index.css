@@ -241,18 +241,22 @@ h1, h2, h3 {
   }
 
   .about {
+    position: relative;
     flex-direction: row;
+    justify-content: center;
     gap: 1em;
+    height: 100vh;
     z-index: 50;
+    padding: 0
   }
 
   .about img {
+    position:initial;
     max-height: 80vh;
     display: block;
   }
 
   .container {
-    width: 100%;
     min-height: 100vh;
     margin: 0 auto;
     position: relative;
@@ -297,8 +301,8 @@ h1, h2, h3 {
     font-size: 1.2rem;
     background-color: var(--bg);
     color: var(--bg2);
-    padding: 2em;
-    border-radius: 1em;
+    padding: 1.5em;
+    border-radius: 4px;
     position: fixed;
     top: 45%;
     left: calc(50% - 100px);
@@ -317,6 +321,7 @@ h1, h2, h3 {
   }
   .contact {
     position: fixed;
+    margin: 0;
     max-width: 300px;
     top: 4em;
     right: 4em;
