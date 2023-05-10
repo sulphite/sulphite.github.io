@@ -1,4 +1,7 @@
 import { motion } from "framer-motion";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 const Contact = () => {
   return (
@@ -12,9 +15,9 @@ const Contact = () => {
     dragMomentum={false}>
     get in touch:
     <ul>
-      <li><a>janett.gerrard@gmail.com</a></li>
-      <li><a href="https://www.linkedin.com/in/jfgerrard/">linkedin</a></li>
-      <li><a href="https://github.com/sulphite">github</a></li>
+      <li><a><FontAwesomeIcon icon={faEnvelope} /> janett.gerrard@gmail.com</a></li>
+      <li><a href="https://www.linkedin.com/in/jfgerrard/"><FontAwesomeIcon icon={faLinkedin} /> linkedin</a></li>
+      <li><a href="https://github.com/sulphite"><FontAwesomeIcon icon={faGithub} /> github</a></li>
     </ul>
   </motion.div>
   )
