@@ -188,12 +188,12 @@ h1, h2, h3 {
   max-width: 100%;
 }
 
-#donut {
+.green {
   background: var(--primary);
   color: var(--bg);
 }
 
-#donut a {color: var(--bg2)}
+.green a {color: var(--bg2)}
 
 .paper {
   background-color: var(--paper);
