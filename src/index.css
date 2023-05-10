@@ -2,7 +2,7 @@
 
 :root {
   --bg: #e6e8d9;
-  --bg2: #433f4e;
+  --bg2: #2f2b38;
   --primary: #459075;
   --text: #a4b494;
   --lighter: #bec5ad;
@@ -61,6 +61,7 @@ h1, h2, h3 {
   z-index: 99;
   background: linear-gradient(var(--bg),transparent);
   opacity: 0.8;
+  color: var(--accent)
 }
 
 .nav > ul {
@@ -107,14 +108,18 @@ h1, h2, h3 {
   width: 70vw;
   background: var(--bg2);
   color: var(--bg);
-  border-radius: 8px;
+  border-radius: 4px;
   padding: 2em;
   display: flex;
   flex-direction: column;
   gap: 1em;
+  box-shadow: 4px 4px 5px rgba(0,0,0,0.3);
 }
 
-.about--infos > h1 {text-shadow: 2px 2px var(--primary);}
+.about--infos > h1 {
+  /* color: var(--accent); */
+  text-shadow: 2px 2px var(--primary);
+}
 
 .tool {
   font-size: 0.8rem;
@@ -186,6 +191,8 @@ h1, h2, h3 {
   color: var(--bg);
 }
 
+#donut a {color: var(--bg2)}
+
 .paper {
   background-color: var(--paper);
   color: var(--bg2);
@@ -209,11 +216,12 @@ h1, h2, h3 {
 
 @media (min-width: 800px) {
   .about--infos {
-    width: 25%;
+    max-width: 300px;
   }
 
   .about {
     flex-direction: row;
+    gap: 1em;
   }
 
   .about img {
