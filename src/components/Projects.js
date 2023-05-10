@@ -1,5 +1,4 @@
-import { motion, useInView } from "framer-motion"
-import { useEffect, useRef } from "react"
+import { motion } from "framer-motion"
 import projectdata from "../data"
 import ProjectInner from "./ProjectInner"
 
@@ -106,6 +105,7 @@ export default function Projects() {
       <motion.div
         onMouseDown={setSelected}
         drag
+        dragPropagation
         dragMomentum={false}
         variants={gipf}
         className='project-container fixed'
@@ -122,11 +122,15 @@ export default function Projects() {
         initial={{y: -500 }}
         animate={{y: 0, transition: {duration: 0.8, delay: 1, type: "spring"}}}
         drag
+        dragSnapToOrigin
+        dragPropagation
         dragMomentum={false}>
         get in touch:
-        <a>janett.gerrard@gmail.com</a>
-        <a href="https://www.linkedin.com/in/jfgerrard/">linkedin</a>
-        <a href="https://github.com/sulphite">github</a>
+        <ul>
+          <li><a>janett.gerrard@gmail.com</a></li>
+          <li><a href="https://www.linkedin.com/in/jfgerrard/">linkedin</a></li>
+          <li><a href="https://github.com/sulphite">github</a></li>
+        </ul>
       </motion.div>
     </div>
   )
