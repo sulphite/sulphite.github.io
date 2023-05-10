@@ -44,45 +44,22 @@ export default function Projects() {
         <span className="close" onClick={close}>✕</span>
       </motion.div>}
 
-      <motion.div
-        onMouseDown={setSelected}
-        drag={!isMobile}
-        dragMomentum={false}
-        variants={isMobile ? mobile : projectdata.donut.animation}
-        className='project-container green fixed'
-        initial="init"
-        animate="anim"
-        whileHover="hover"
-        whileDrag={{zIndex: 40 }}>
-          <ProjectInner data={projectdata.donut} />
-      </motion.div>
-
-      <motion.div
-        onMouseDown={setSelected}
-        drag={!isMobile}
-        dragMomentum={false}
-        variants={isMobile ? mobile : projectdata.aoy.animation}
-        className='project-container paper fixed'
-        initial="init"
-        animate="anim"
-        whileHover="hover"
-        whileDrag={{zIndex: 40 }}>
-          <ProjectInner data={projectdata.aoy} />
-      </motion.div>
-
-      <motion.div
-        onMouseDown={setSelected}
-        drag={!isMobile}
-        dragPropagation
-        dragMomentum={false}
-        variants={isMobile ? mobile : projectdata.hack.animation}
-        className='project-container fixed'
-        initial="init"
-        animate="anim"
-        whileHover="hover"
-        whileDrag={{zIndex: 40 }}>
-          <ProjectInner data={projectdata.hack} />
-      </motion.div>
+      {Object.values(projectdata).map(item => {
+        return (
+        <motion.div
+          key={item.id}
+          onMouseDown={setSelected}
+          drag={!isMobile}
+          dragMomentum={false}
+          variants={isMobile ? mobile : item.animation}
+          className={item.class}
+          initial="init"
+          animate="anim"
+          whileHover="hover"
+          whileDrag={{zIndex: 40 }}>
+            <ProjectInner data={item} />
+        </motion.div>)
+      })}
 
       <Contact mobile={isMobile} />
     </div>

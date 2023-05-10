@@ -8,6 +8,8 @@ const generatePosition = (axis, plus = true) => {
 
 const projectdata = {
   donut: {
+    id: 1,
+    class: "project-container green fixed",
     title: "Every Bite Counts",
     description: ["An airbnb-style marketplace app for donuts, built with Ruby on Rails.","Users can search by location and flavour, upload their own donuts, and arrange pickup times."],
     github: "https://github.com/sulphite/every-bite-counts",
@@ -21,6 +23,8 @@ const projectdata = {
     }
   },
   aoy: {
+    id: 2,
+    class: "project-container paper fixed",
     title: "All of You",
     description: ["A web app designed to help curators find and connect with underrepresented artists, and to help artists gain exposure through matching opportunities.",
   "The sitewide search and tagging system was made to be simple to use for those unfamiliar with tech."],
@@ -35,6 +39,8 @@ const projectdata = {
     }
   },
   hack: {
+    id: 3,
+    class: "project-container fixed",
     title: "Survival as a Service",
     description: ["Created at Hack-GPT 2023, a one-day hackathon centered on the power of LLMs. A tongue-in-cheek portrayal of the ease with which LLM safeguards can be subverted, and a reminder of the importance of ethics in AI development."],
     github: "",
