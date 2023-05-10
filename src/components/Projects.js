@@ -11,42 +11,15 @@ export default function Projects() {
 
   const isMobile = window.innerWidth < 600;
 
-  const generatePosition = (axis, plus = true) => {
-    let width = (axis === "x") ? window.innerWidth : window.innerHeight
-    let value = Math.floor(Math.random() * width/3)
-    value = plus ? value : -value
-    console.log(value)
-    return value
-  }
-
   const mobile = {
     init: {opacity: 0},
     anim: {opacity: 1, transition: {delay: 0.5, type: "spring", duration: 0.8, ease: "easeOut"}},
     hover: {scale: 1.1, zIndex: 40, transition: {ease: "easeOut", duration: 0.2}},
   }
 
-  const donut = {
-    init: {opacity: 0},
-    anim: {rotate: "5deg", x: generatePosition("x", true), y: generatePosition("y", true), opacity: 1, transition: {delay: 0.5, type: "spring", duration: 0.8, ease: "easeOut"}},
-    hover: {scale: 1.1, zIndex: 40, transition: {ease: "easeOut", duration: 0.2}},
-  }
-
-  const aoy = {
-    init: {opacity: 0},
-    anim: {rotate: "-5deg", x: generatePosition("x", false), y: generatePosition("y", true), opacity: 1, transition: {delay: 0.3, type: "spring", duration: 0.8, ease: "easeOut"}},
-    hover: {scale: 1.05, zIndex: 40, transition: {ease: "easeOut", duration: 0.2}},
-  }
-
-  const gipf = {
-    init: {opacity: 0},
-    anim: {rotate: "1deg", x: generatePosition("x", false), y: generatePosition("y", false), opacity: 1, transition: {delay: 0, type: "spring", duration: 0.6, ease: "easeOut"}},
-    hover: {scale: 1.1, zIndex: 40, transition: {ease: "easeOut", duration: 0.2}},
-  }
-
   const close = () => {
     document.querySelector(".instructions").classList.add("display-none")
   }
-
 
   const setSelected = (e) => {
     let selected = document.querySelectorAll(".project-container");
@@ -75,7 +48,7 @@ export default function Projects() {
         onMouseDown={setSelected}
         drag={!isMobile}
         dragMomentum={false}
-        variants={isMobile ? mobile : donut}
+        variants={isMobile ? mobile : projectdata.donut.animation}
         className='project-container green fixed'
         initial="init"
         animate="anim"
@@ -88,7 +61,7 @@ export default function Projects() {
         onMouseDown={setSelected}
         drag={!isMobile}
         dragMomentum={false}
-        variants={isMobile ? mobile : aoy}
+        variants={isMobile ? mobile : projectdata.aoy.animation}
         className='project-container paper fixed'
         initial="init"
         animate="anim"
@@ -102,7 +75,7 @@ export default function Projects() {
         drag={!isMobile}
         dragPropagation
         dragMomentum={false}
-        variants={isMobile ? mobile : gipf}
+        variants={isMobile ? mobile : projectdata.hack.animation}
         className='project-container fixed'
         initial="init"
         animate="anim"
