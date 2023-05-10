@@ -1,6 +1,7 @@
 import { motion } from "framer-motion"
 import projectdata from "../data"
 import ProjectInner from "./ProjectInner"
+import Contact from "./Contact";
 
 export default function Projects() {
   // const donut_ref = useRef(null)
@@ -74,6 +75,7 @@ export default function Projects() {
         Click and drag to look around!
         <span className="close" onClick={close}>✕</span>
       </motion.div>}
+
       <motion.div
         onMouseDown={setSelected}
         drag
@@ -117,21 +119,7 @@ export default function Projects() {
           <ProjectInner data={projectdata.hack} />
       </motion.div>
 
-      <motion.div
-        className="contact paper"
-        initial={{y: -500 }}
-        animate={{y: 0, transition: {duration: 0.8, delay: 1, type: "spring"}}}
-        drag
-        dragSnapToOrigin
-        dragPropagation
-        dragMomentum={false}>
-        get in touch:
-        <ul>
-          <li><a>janett.gerrard@gmail.com</a></li>
-          <li><a href="https://www.linkedin.com/in/jfgerrard/">linkedin</a></li>
-          <li><a href="https://github.com/sulphite">github</a></li>
-        </ul>
-      </motion.div>
+      <Contact />
     </div>
   )
 }
