@@ -7,7 +7,7 @@ const ProjectInner = (props) => {
     <div className="project-inner">
       <div className="project-details">
         <h3>{props.data.title}</h3>
-        <p>{props.data.description}</p>
+        {props.data.description.map(para => (<p>{para}</p>))}
       </div>
       <div className="project-details">
       <img src={props.data.image_url} className="project-image"/>

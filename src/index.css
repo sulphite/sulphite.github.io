@@ -18,6 +18,8 @@
 
 body {
   background: var(--bg);
+  background-image: url("./assets/lined-paper.png");
+  background-attachment: fixed;
   color: var(--text);
   margin: 0;
   scroll-behavior: smooth;
