@@ -6,6 +6,7 @@
   --primary: #459075;
   --text: #a4b494;
   --lighter: #bec5ad;
+  --paper: #DAD1B5;
   --accent: rgb(255, 78, 75);
   /* font-size: calc(10px + 2vmin); */
   font-size: 16px;
@@ -186,12 +187,18 @@ h1, h2, h3 {
 }
 
 .paper {
-  background-color: #DAD1B5;
+  background-color: var(--paper);
+  color: var(--bg2);
   border-image-source: url("./assets/edge\ ver\ 2.png");
   border-image-slice: 5% fill;
   border-image-repeat: round;
   border-image-outset: 20px;
   border-image-width: 20px;
+}
+
+.paper .tool {
+  color: var(--primary);
+  border-color: var(--text);
 }
 
 .tidy-up {
