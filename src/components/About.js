@@ -2,6 +2,7 @@ import pro from "../assets/selfy2.png"
 import { motion } from "framer-motion"
 
 const About = () => {
+  const widerThan500 = window.innerWidth > 500
 
   return (
       <motion.div
@@ -11,13 +12,14 @@ const About = () => {
         transition={{ type: "spring", ease: "easeInOut", duration: 0.5, delay: 0.9 }}
         id="about"
         >
-        <motion.img src={pro}
+        {widerThan500 ? <motion.img src={pro}
           animate={{y: [0,5,0,-5,0]}}
           transition={{duration: 4, repeat: Infinity, ease: "linear"}}
-        />
+        /> : <motion.img src={pro}
+      />}
         <div className="about--infos">
           <p>Hi there, I'm</p>
-          <h1>Jana Gerrard !</h1>
+          <h1>Jana Gerrard!</h1>
           <p>
             a full stack developer
             blah blah blah blah blah
