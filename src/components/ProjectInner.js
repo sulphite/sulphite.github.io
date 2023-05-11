@@ -10,7 +10,7 @@ const ProjectInner = (props) => {
         {props.data.description.map(para => (<p>{para}</p>))}
       </div>
       <div className="project-details">
-      <img src={props.data.image_url} className="project-image"/>
+      <img src={props.data.image_url} className="project-image" alt="project demonstration" />
       <div className="flex-row end">
         {props.data.github && <a href={props.data.github}><FontAwesomeIcon icon={faGithub} /> github</a>}
         {props.data.url && <a href={props.data.url}><FontAwesomeIcon icon={faLink} /> live demo</a>}

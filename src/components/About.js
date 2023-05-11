@@ -15,15 +15,16 @@ const About = () => {
         {widerThan500 ? <motion.img src={pro}
           animate={{y: [0,5,0,-5,0]}}
           transition={{duration: 4, repeat: Infinity, ease: "linear"}}
-        /> : <motion.img src={pro}
+          alt="a self portrait."
+        /> : <motion.img src={pro} alt="a self portrait."
       />}
         <div className="about--infos">
           <p>Hi there, I'm</p>
           <h1>Jana Gerrard!</h1>
           <p>
             a full stack developer
-            blah blah blah blah blah
-            making projects aesthetic and functional too
+            bringing an artist's eye to crafting
+            elegant and efficient web solutions.
           </p>
           <motion.a
             href="#projects"

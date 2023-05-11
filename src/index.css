@@ -274,7 +274,7 @@ h1, h2, h3 {
   .project-inner {
     padding: 1.2em;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 2fr 3fr;
   }
 
   .project-image {

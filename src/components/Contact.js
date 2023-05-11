@@ -15,7 +15,8 @@ const Contact = (props) => {
     dragMomentum={false}>
     get in touch:
     <ul>
-      <li><a><FontAwesomeIcon icon={faEnvelope} /> janett.gerrard@gmail.com</a></li>
+      {//eslint-disable-next-line
+      }<li><a href=""><FontAwesomeIcon icon={faEnvelope} /> janett.gerrard@gmail.com</a></li>
       <li><a href="https://www.linkedin.com/in/jfgerrard/"><FontAwesomeIcon icon={faLinkedin} /> linkedin</a></li>
       <li><a href="https://github.com/sulphite"><FontAwesomeIcon icon={faGithub} /> github</a></li>
     </ul>
