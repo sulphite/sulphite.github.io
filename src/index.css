@@ -50,12 +50,8 @@ h1, h2, h3 {
 }
 
 .nav {
-  display: flex;
   width: calc(100% - 32px);
-  gap: 1em;
   padding: 1em;
-  justify-content: space-between;
-  align-items: center;
   position: fixed;
   top:0;
   z-index: 99;
@@ -64,7 +60,14 @@ h1, h2, h3 {
   color: var(--accent)
 }
 
-.nav > ul {
+.nav-inner {
+  display: flex;
+  gap: 1em;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-inner > ul {
   list-style: none;
   display: flex;
   gap: 1em;
@@ -235,9 +238,16 @@ h1, h2, h3 {
     overflow-x: hidden;
   }
 
+  .nav-inner {
+    font-size: 1.2rem;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
   .about--infos {
     max-width: 300px;
     background-color: var(--bg2);
+    gap: 1.2em;
   }
 
   .about {
@@ -253,6 +263,7 @@ h1, h2, h3 {
   .about img {
     position:initial;
     max-height: 80vh;
+    max-width: 50%;
     display: block;
   }
 
@@ -263,7 +274,7 @@ h1, h2, h3 {
   }
 
   .project-container {
-    width: 600px;
+    width: 700px;
     height: fit-content;
     position: relative;
     top: 20vh;

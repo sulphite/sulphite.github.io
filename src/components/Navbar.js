@@ -18,10 +18,12 @@ export default function Navbar() {
         animate={{opacity: 1, y:0, transition: {duration: 0.3, ease: "easeOut"}}}
         exit={{opacity: 0}}
         >
-        <h3>jfgerrard</h3>
-        <ul className="nav--links">
-          <li><a href="#about">About</a></li>
-        </ul>
+        <div className="nav-inner">
+          <h3>jfgerrard</h3>
+          <ul className="nav--links">
+            <li><a href="#about">About</a></li>
+          </ul>
+          </div>
       </motion.nav>}
     </AnimatePresence>
   )
