@@ -12,8 +12,8 @@ const ProjectInner = (props) => {
       <div className="project-details">
       <img src={props.data.image_url} className="project-image" alt="project demonstration" />
       <div className="flex-row end">
-        {props.data.github && <a href={props.data.github}><FontAwesomeIcon icon={faGithub} /> github</a>}
-        {props.data.url && <a href={props.data.url}><FontAwesomeIcon icon={faLink} /> live demo</a>}
+        {props.data.github && <a href={props.data.github}><FontAwesomeIcon icon={faGithub} target="_blank" /> github</a>}
+        {props.data.url && <a href={props.data.url}><FontAwesomeIcon icon={faLink}  target="_blank" /> live demo</a>}
       </div>
       <div className="flex-row end">
       {props.data.tools.map((item) => {

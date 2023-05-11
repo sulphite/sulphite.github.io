@@ -17,8 +17,8 @@ const Contact = (props) => {
     <ul>
       {//eslint-disable-next-line
       }<li><a href=""><FontAwesomeIcon icon={faEnvelope} /> janett.gerrard@gmail.com</a></li>
-      <li><a href="https://www.linkedin.com/in/jfgerrard/"><FontAwesomeIcon icon={faLinkedin} /> linkedin</a></li>
-      <li><a href="https://github.com/sulphite"><FontAwesomeIcon icon={faGithub} /> github</a></li>
+      <li><a href="https://www.linkedin.com/in/jfgerrard/" target="_blank"><FontAwesomeIcon icon={faLinkedin} /> linkedin</a></li>
+      <li><a href="https://github.com/sulphite" target="_blank"><FontAwesomeIcon icon={faGithub} /> github</a></li>
     </ul>
   </motion.div>
   )
