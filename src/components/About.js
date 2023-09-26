@@ -1,4 +1,4 @@
-import pro from "../assets/selfy2.png"
+import selfPortrait from "../assets/self.webp"
 import { motion } from "framer-motion"
 
 const About = () => {
@@ -12,7 +12,7 @@ const About = () => {
         transition={{ type: "spring", ease: "easeInOut", duration: 0.5, delay: 0.9 }}
         id="about"
         >
-        {widerThan500 ? <motion.img src={pro}
+        {widerThan500 ? <motion.img src={selfPortrait}
           animate={{y: [0,5,0,-5,0]}}
           transition={{duration: 4, repeat: Infinity, ease: "linear"}}
           alt="a self portrait."
