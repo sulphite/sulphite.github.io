@@ -16,7 +16,7 @@ const About = () => {
           animate={{y: [0,5,0,-5,0]}}
           transition={{duration: 4, repeat: Infinity, ease: "linear"}}
           alt="a self portrait."
-        /> : <motion.img src={pro} alt="a self portrait."
+        /> : <motion.img src={selfPortrait} alt="a self portrait."
       />}
         <div className="about--infos">
           <p>Hi there, I'm</p>
